@@ -3,6 +3,7 @@ package io.gaiapipeline;
 import io.gaiapipeline.javasdk.*;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * Hello world!
@@ -10,6 +11,8 @@ import java.util.ArrayList;
  */
 public class App 
 {
+    private static final Logger LOGGER = Logger.getLogger(App.class.getName());
+
     public static void main( String[] args )
     {
         PipelineJob job1 = new PipelineJob();
@@ -24,9 +27,9 @@ public class App
         job1.setArgs(pArgs1);
 
         Handler handlerJob1 = (gaiaArgs) -> {
-            System.out.println( "AwesomeJob execution started!" );
+            LOGGER.info( "AwesomeJob execution started!" );
             for (PipelineArgument arg: gaiaArgs) {
-                System.out.println("Key:" + arg.getKey() + ";Value:" + arg.getValue());
+                LOGGER.info("Key:" + arg.getKey() + ";Value:" + arg.getValue());
             }
         };
         job1.setHandler(handlerJob1);
@@ -42,9 +45,9 @@ public class App
         job2.setArgs(pArgs2);
 
         Handler handlerJob2 = (gaiaArgs) -> {
-            System.out.println( "Get Secret execution started!" );
+            LOGGER.info( "Get Secret execution started!" );
             for (PipelineArgument arg: gaiaArgs) {
-                System.out.println("Key:" + arg.getKey() + ";Value:" + arg.getValue());
+                LOGGER.info("Key:" + arg.getKey() + ";Value:" + arg.getValue());
             }
         };
         job2.setHandler(handlerJob2);
