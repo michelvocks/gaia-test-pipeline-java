@@ -29,6 +29,14 @@
     </dependency>
   </dependencies>
 
+  <repositories>
+    <repository>
+      <id>ossrh-snapshot</id>
+      <name>ossrh snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+  </repositories>
+
   <build>
     <finalName>plugin</finalName>
     <extensions>
