@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.logging.Logger;
 
 /**
- * Hello world!
+ * Gaia Java Test Pipeline
  *
  */
 public class App 
