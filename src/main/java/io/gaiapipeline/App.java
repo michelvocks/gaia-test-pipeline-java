@@ -49,6 +49,7 @@ public class App
         Handler handlerJob2 = (gaiaArgs) -> {
             LOGGER.info( "Get Secret execution started!" );
             for (PipelineArgument arg: gaiaArgs) {
+                // Print out all given arguments
                 LOGGER.info("Key:" + arg.getKey() + ";Value:" + arg.getValue());
             }
         };
