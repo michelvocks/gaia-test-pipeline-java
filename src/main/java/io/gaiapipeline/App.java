@@ -62,6 +62,7 @@ public class App
         try {
             sdk.Serve(jobs);
         } catch (Exception ex) {
+            // Print stacktrace
             ex.printStackTrace();
         }
     }
